@@ -58,34 +58,36 @@
           </ul>
         </nav>
         <div class="row justify-content-center">
-          <div class="col-xl-10 col-lg-12 col-md-9">
-            <div class="card o-hidden border-0 shadow-lg my-5">
-              <div class="card-body p-0">
-                <div class="row">
-                  <div class="col-lg-6 d-none d-lg-block bg-login-image" ></div>
-                    <div class="col-lg-6">
-                      <div class="p-5">
-                        <div class="text-center">
-                          <h1 class="h4 text-gray-900 mb-4">Bienvenido al sistema de Vacaciones </h1>
-                        </div>           
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+          <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="ae-container-fluid rk-topbar"> 
+      <form class="form">       
+          <div class="row justify-content-center">
+            <div class="col-xs-6 col-xs-offset-9">
+              <a class="nav-link rk-item ae-masonry__item" routerLink="principalde">
+                <img src="images/vac.PNG" alt="" width= "400px" height="400px">
+                  
+              </a>
+              <p class="ae-u-bolder au-mb-6" ALIGN="center" style="color:blue"><b>Solicita vacaciones</b></p>
             </div>
-          </div>
+          </div> 
+      </form>
+    </div>
+  </nav>
         </div>
       <footer class="sticky-footer bg-white">
         <div class="container my-auto">
           <div class="copyright text-center my-auto">
-            <span>Copyright &copy; Your Website 2019</span>
+            <span>Nuxiba &copy; Vacaciones 2020</span>
           </div>
         </div>
       </footer>
     </div>
   </div>
   
+
+
+
+
   <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
@@ -105,29 +107,8 @@
   </div>
 
 
-
   <script src="<?php echo e(asset('plantillamx/vendor/jquery/jquery.min.js')); ?>"></script>
   <script src="<?php echo e(asset('plantillamx/vendor/bootstrap/js/bootstrap.bundle.min.js')); ?>"></script>
-
-  <!-- Core plugin JavaScript-->
-  <script src="{asset('plantillamx/vendor/jquery-easing/jquery.easing.min.js')}"></script>
-
-  <!-- Custom scripts for all pages-->
-  <script src="{asset('plantillamx/js/sb-admin-2.min.js')}"></script>
-
-  <!-- Page level plugins -->
-  <script src="{asset('plantillamx/vendor/chart.js/Chart.min.js')}"></script>
-
-  <!-- Page level custom scripts -->
-  <script src="{asset('plantillamx/js/demo/chart-area-demo.js')}"></script>
-  <script src="{asset('plantillamx/js/demo/chart-pie-demo.js')} "></script>
-
-  <!-- Page level plugins -->
-  <script src="{asset('plantillamx/vendor/datatables/jquery.dataTables.min.js')}"></script>
-  <script src="{asset('plantillamx/vendor/datatables/dataTables.bootstrap4.min.js')}"></script>
-
-  <!-- Page level custom scripts -->
-  <script src="{asset('plantillamx/js/demo/datatables-demo.js')}"></script>
 
 </body>
 
