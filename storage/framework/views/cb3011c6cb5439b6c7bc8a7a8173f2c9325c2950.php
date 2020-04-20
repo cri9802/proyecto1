@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="{{asset('dist/css/skins/_all-skins.min.css')}}">
+<link rel="stylesheet" href="<?php echo e(asset('dist/css/skins/_all-skins.min.css')); ?>">
  
  <!DOCTYPE html>
 <html lang="en">
@@ -15,22 +15,22 @@
   <title>Nuxiba</title>
 
   <!-- Custom fonts for this template-->
-  <link href="{{asset('plantillamx/vendor/fontawesome-free/css/all.min.css')}}" rel="stylesheet" type="text/css">
+  <link href="<?php echo e(asset('plantillamx/vendor/fontawesome-free/css/all.min.css')); ?>" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
   <!-- Custom styles for this template -->
-  <link href="{{asset('plantillamx/css/sb-admin-2.min.css')}}" rel="stylesheet">
+  <link href="<?php echo e(asset('plantillamx/css/sb-admin-2.min.css')); ?>" rel="stylesheet">
 
 
     <!-- Custom fonts for this template -->
-  <link href="{{asset('plantillamx/vendor/fontawesome-free/css/all.min.css')}}" rel="stylesheet" type="text/css">
+  <link href="<?php echo e(asset('plantillamx/vendor/fontawesome-free/css/all.min.css')); ?>" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
   <!-- Custom styles for this template -->
-  <link href="{{asset('plantillamx/css/sb-admin-2.min.css')}}" rel="stylesheet">
+  <link href="<?php echo e(asset('plantillamx/css/sb-admin-2.min.css')); ?>" rel="stylesheet">
 
   <!-- Custom styles for this page -->
-  <link href="{{asset('plantillamx/vendor/datatables/dataTables.bootstrap4.min.css')}}" rel="stylesheet">
+  <link href="<?php echo e(asset('plantillamx/vendor/datatables/dataTables.bootstrap4.min.css')); ?>" rel="stylesheet">
 
 </head>
 
@@ -43,13 +43,13 @@
           <ul class="navbar-nav ml-auto">           
             <li class="nav-item dropdown no-arrow">
               <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <span class="mr-2 d-none d-lg-inline text-gray-600 small">  {{Session::get('sesionname')}}</b>
+                <span class="mr-2 d-none d-lg-inline text-gray-600 small">  <?php echo e(Session::get('sesionname')); ?></b>
                 </span>
                 <img class="img-profile rounded-circle" src="https://source.unsplash.com/QAB-WJcbgJk/60x60">
               </a>
               <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
                 <div class="dropdown-divider"></div>
-                <a  href="{{URL::action('controlador_acceso@cerrarsesion')}}" class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                <a  href="<?php echo e(URL::action('controlador_acceso@cerrarsesion')); ?>" class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
                   <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                   Salir
                 </a>
@@ -98,7 +98,7 @@
         <div class="modal-body">Seleccione "Cerrar sesión" a continuación si está listo para finalizar su sesión actual.</div>
         <div class="modal-footer">
           <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
-          <a class="btn btn-primary" href="{{URL::action('controlador_acceso@cerrarsesion')}}" >Salir</a>
+          <a class="btn btn-primary" href="<?php echo e(URL::action('controlador_acceso@cerrarsesion')); ?>" >Salir</a>
         </div>
       </div>
     </div>
@@ -106,8 +106,8 @@
 
 
 
-  <script src="{{asset('plantillamx/vendor/jquery/jquery.min.js')}}"></script>
-  <script src="{{asset('plantillamx/vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+  <script src="<?php echo e(asset('plantillamx/vendor/jquery/jquery.min.js')); ?>"></script>
+  <script src="<?php echo e(asset('plantillamx/vendor/bootstrap/js/bootstrap.bundle.min.js')); ?>"></script>
 
   <!-- Core plugin JavaScript-->
   <script src="{asset('plantillamx/vendor/jquery-easing/jquery.easing.min.js')}"></script>

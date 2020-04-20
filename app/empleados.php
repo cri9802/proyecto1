@@ -10,7 +10,7 @@ class empleados extends Model
     use SoftDeletes;
 
     protected $primaryKey = 'id_empleado';
- protected $fillable=['id_empleado','nombre','app','apm','correo','email','password','status'];
+ protected $fillable=['id_empleado','nombre','app','apm','correo','email','password'];
 
     protected $date=['deleted_at'];
 }

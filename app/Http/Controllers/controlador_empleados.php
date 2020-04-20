@@ -12,23 +12,21 @@ class controlador_empleados extends Controller
 {
     public function altaempleado(){
 
-		if(Session::get('sesionid_empleado')!=""){
-
-		$clavequesigue = empleados::withTrashed()->orderBy('id_empleado','desc')
-		->take(1)
-		->get();
-		$id_emp = $clavequesigue[0]->id_empleado+1;
-
-		return view ('sistema.altaempleado')->with('id_emp',$id_emp);
+	$clavequesigue = empleados::withTrashed()->orderBy('id_empleado','desc')
+								->take(1)
+								->get();
+	  if (count($clavequesigue)==0)
+	  {
+		  $id_emp = 1;
+	  }
+	  else
+	  {
+     $id_emp = $clavequesigue[0]->id_empleado+1;
+      }
+	
+     return view ("sistema.altaempleado")
+			->with('id_emp',$id_emp);
     }
-	else
-	{
-		Session::flash('error','Es necesario logearse para continuar');
-	}
-	return redirect()->route('login');
-
-
-	}
 	public function guardaempleados(Request $request){
 		$id_empleado = $request->id_empleado;
         $nombre = $request->nombre;
@@ -36,6 +34,7 @@ class controlador_empleados extends Controller
         $apm = $request->apm;
 		$email = $request->email;
 		$password = $request->password;
+
 		//no se recibe el archivo
 
 		$this->validate($request,[
@@ -53,7 +52,7 @@ class controlador_empleados extends Controller
 		$emp->id_empleado = $request->id_empleado;
         $emp->nombre = $request->nombre;	
         $emp->app = $request->app;
-		$emp->apm = $request->email;	
+		$emp->apm = $request->apm;	
 		$emp->email = $request->email;	
 		$emp->password = $request->password;
 		
